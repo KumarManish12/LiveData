@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="Reset"
+            type="String" />
+        <variable
+            name="Show"
+            type="String" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/ll"
+    tools:context=".Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnreset"
+        android:text="Reset"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Show}"
+        android:textSize="@dimen/size_30sp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:id="@+id/tvshow"
+        />
+
+</LinearLayout>
+</layout>

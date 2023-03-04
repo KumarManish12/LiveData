@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="intValue"
+            type="Integer" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red"
+        android:id="@+id/btnred"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:layout_marginStart="@dimen/margin_90dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnblue"
+        android:layout_toEndOf="@id/btnred"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:layout_marginStart="@dimen/margin_30dp"
+        android:text="Blue"
+        />
+
+    <TextView
+        android:id="@+id/tvcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnred"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:layout_toEndOf="@id/btnred"
+        android:textSize="@dimen/size_30sp"
+        android:text="@{intValue.toString()}"
+        />
+   <androidx.fragment.app.FragmentContainerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/tvcount"
+       android:layout_marginTop="@dimen/margin_30dp"
+       android:name="com.example.livedata.Fragment1"
+       android:id="@+id/fragmentcontainer"
+    />
+
+</RelativeLayout>
+</layout>
